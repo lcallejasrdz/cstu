@@ -44,9 +44,10 @@
         @yield('styles')
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-full">
             @include('layout.menus.principal')
             @yield('content')
+            @include('layout.footer')
         </div>
 
         @include('notifications')
@@ -80,7 +81,7 @@
         {{ Html::script("assets/plugins/timepicker/timepicker.call.js") }}
 
         {{-- Google Maps --}}
-        {{ Html::script("https://maps.googleapis.com/maps/api/js?key=". env('GOOGLE_MAPS_KEY') ."&libraries=places&callback=initAutocomplete", ['async', 'defer']) }}
+        {{ Html::script("https://maps.googleapis.com/maps/api/js?key=". env('GOOGLE_MAPS_KEY') ."&libraries=places&callback=initMap", ['async', 'defer']) }}
         {{ Html::script("assets/plugins/google-maps/google_maps.js") }}
 
         @yield('scripts')
