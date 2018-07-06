@@ -62,7 +62,7 @@
 					<h2 class="text-center color-blue">Contáctanos Ahora</h2>
 					<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Atención</span> Inmediata:</p>
 					<p class="text-center font-size-19">43315214 // 58714282 // 5561103023</p>
-					<p class="text-center font-size-19"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span></p>
+					<p class="text-center font-size-19"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span> <a href="tel:+5215543315214"><i class="fa fa-whatsapp fa-fw color-green"></i></a></p>
 				</div>
 			</div>
 			<div class="row">
