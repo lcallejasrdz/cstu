@@ -19,21 +19,31 @@
 				<div class="row">
 					<div class="col-md-7">
 						<div class="row padding-top-50">
-							<div class="col-xs-2 text-center">Logo</div>
-							<div class="col-xs-4 text-center">18 MESES<br>DE GARANTÍA</div>
-							<div class="col-xs-2 text-center">Logo</div>
-							<div class="col-xs-4 text-center">24 HORAS</div>
+							<div class="col-xs-2 text-center">
+								<img src="{{ URL::to('assets/images/index/icono1.png') }}" alt="..." class="icono-slider-home">
+							</div>
+							<div class="col-xs-4 text-center text-slider-home-2">18 MESES<br>DE GARANTÍA</div>
+							<div class="col-xs-2 text-center">
+								<img src="{{ URL::to('assets/images/index/icono2.png') }}" alt="..." class="icono-slider-home">
+							</div>
+							<div class="col-xs-4 text-center text-slider-home-1">24 HORAS</div>
 						</div>
 						<div class="row padding-top-50">
-							<div class="col-xs-2 text-center">Logo</div>
-							<div class="col-xs-4 text-center">REPARACIÓN<br>EL MISMO DÍA</div>
-							<div class="col-xs-2 text-center">Logo</div>
-							<div class="col-xs-4 text-center">MEJORAMOS<br>PRESUPUESTOS</div>
+							<div class="col-xs-2 text-center">
+								<img src="{{ URL::to('assets/images/index/icono3.png') }}" alt="..." class="icono-slider-home">
+							</div>
+							<div class="col-xs-4 text-center text-slider-home-2">REPARACIÓN<br>EL MISMO DÍA</div>
+							<div class="col-xs-2 text-center">
+								<img src="{{ URL::to('assets/images/index/icono4.png') }}" alt="..." class="icono-slider-home">
+							</div>
+							<div class="col-xs-4 text-center text-slider-home-2">MEJORAMOS<br>PRESUPUESTOS</div>
 						</div>
 						<div class="row padding-top-50">
 							<div class="col-xs-3 text-center"></div>
-							<div class="col-xs-2 text-center">Logo</div>
-							<div class="col-xs-4 text-center">ATENCIÓN LOS<br>365 DÍAS</div>
+							<div class="col-xs-2 text-center">
+								<img src="{{ URL::to('assets/images/index/icono5.png') }}" alt="..." class="icono-slider-home">
+							</div>
+							<div class="col-xs-4 text-center text-slider-home-2">ATENCIÓN LOS<br>365 DÍAS</div>
 							<div class="col-xs-3 text-center"></div>
 						</div>
 					</div>
@@ -50,41 +60,41 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="text-center color-blue">Contáctanos Ahora</h2>
-					<p class="text-center"><span class="color-orange">></span> <span class="underline underline-orange">Atención</span> Inmediata:</p>
-					<p class="text-center">43315214 // 58714282 // 5561103023</p>
-					<p class="text-center"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span></p>
+					<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Atención</span> Inmediata:</p>
+					<p class="text-center font-size-19">43315214 // 58714282 // 5561103023</p>
+					<p class="text-center font-size-19"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span></p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 text-center">
 					<img src="{{ URL::to('assets/images/index/reparacion1.png') }}" alt="...">
-					<p class="text-center"><span class="color-orange">></span> <span class="underline underline-orange">Reparación</span> de Refrigeradores</p>
+					<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Reparación</span> de Refrigeradores</p>
 					<div class="row">
-						<div class="col-md-6">
-							<p>18 Meses de Garantía</p>
-							<p>Reparación el Mismo Día</p>
-							<p>Refacciones Originales</p>
+						<div class="col-md-6 text-left">
+							<p class="font-size-16">18 Meses de Garantía</p>
+							<p class="font-size-16">Reparación el Mismo Día</p>
+							<p class="font-size-16">Refacciones Originales</p>
 						</div>
-						<div class="col-md-6">
-							<p>Servicio 24 Hrs.</p>
-							<p>Mejoramos Presupuestos</p>
-							<p>Servicio 365 Días del Año</p>
+						<div class="col-md-6 text-left">
+							<p class="font-size-16">Servicio 24 Hrs.</p>
+							<p class="font-size-16">Mejoramos Presupuestos</p>
+							<p class="font-size-16">Servicio 365 Días del Año</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 text-center">
 					<img src="{{ URL::to('assets/images/index/reparacion1.png') }}" alt="...">
-					<p class="text-center"><span class="color-orange">></span> <span class="underline underline-orange">Reparación</span> de Equipos de Lavado</p>
+					<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Reparación</span> de Equipos de Lavado</p>
 					<div class="row">
-						<div class="col-md-6">
-							<p>18 Meses de Garantía</p>
-							<p>Reparación el Mismo Día</p>
-							<p>Refacciones Originales</p>
+						<div class="col-md-6 text-left">
+							<p class="font-size-16">18 Meses de Garantía</p>
+							<p class="font-size-16">Reparación el Mismo Día</p>
+							<p class="font-size-16">Refacciones Originales</p>
 						</div>
-						<div class="col-md-6">
-							<p>Servicio 24 Hrs.</p>
-							<p>Mejoramos Presupuestos</p>
-							<p>Servicio 365 Días del Año</p>
+						<div class="col-md-6 text-left">
+							<p class="font-size-16">Servicio 24 Hrs.</p>
+							<p class="font-size-16">Mejoramos Presupuestos</p>
+							<p class="font-size-16">Servicio 365 Días del Año</p>
 						</div>
 					</div>
 				</div>
@@ -92,10 +102,10 @@
 		</div>
 	</div>
 
-	<div class="row bg-blue color-white">
+	<div class="row bg-blue color-white module-address">
 		<div class="col-xs-12">
-			<p class="text-center">Mantenimiento Preventivo y Correctivo para Equipos de Refrigeración y Lavado Doméstico y Comercial</p>
-			<p class="text-center"><strong>Zonas de Cobertura: Valle Dorado, Satélite, Polanco, Naucalpan, Santa Mónica y Zona Norte del Estado de México</strong></p>
+			<p class="text-center font-size-16">Mantenimiento Preventivo y Correctivo para Equipos de Refrigeración y Lavado Doméstico y Comercial</p>
+			<p class="text-center font-size-16"><strong>Zonas de Cobertura: Valle Dorado, Satélite, Polanco, Naucalpan, Santa Mónica y Zona Norte del Estado de México</strong></p>
 		</div>
 	</div>
 
@@ -109,7 +119,7 @@
 		<div class="row contact">
 	    	<div class="col-xs-12">
 	    		<h2 class="text-center">Contacto</h2>
-				<p class="text-center">Para ofrecerle un mejor servicio, favor de llenar el siguiente formulario y en breve nos comunicaremos con usted.</p>
+				<p class="text-center font-size-16">Para ofrecerle un mejor servicio, favor de llenar el siguiente formulario y en breve nos comunicaremos con usted.</p>
 				<div class="row padding-top-50">
 					<div class="col-md-6 text-center">
 						<img src="{{ URL::to('assets/images/index/hombre2.png') }}" alt="...">
@@ -152,7 +162,7 @@
 				      {!! Form::close() !!}
 					</div>
 				</div>
-				<p class="text-center"><span class="color-orange">></span> <span class="underline underline-orange">Contáctanos</span>, Atención Inmediata: 43315214 // 58714282 // 5561103023</p>
+				<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Contáctanos</span>, Atención Inmediata: 43315214 // 58714282 // 5561103023</p>
 	    	</div>
 	    </div>
 	</div>

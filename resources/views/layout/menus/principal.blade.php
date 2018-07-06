@@ -21,7 +21,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 {{-- Products --}}
                 <li class="{{ $active == 'search' ? 'active' : '' }}">
                     <a href="{{ URL::route('search') }}">
@@ -40,9 +40,6 @@
                         Cobertura
                     </a>
                 </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
                 {{-- Lang --}}
                 <li>
                     <a href="{{ url('lang', [\App::getLocale() == 'es' ? 'en' : 'es']) }}">
