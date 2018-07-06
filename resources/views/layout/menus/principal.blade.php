@@ -23,26 +23,26 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 {{-- Products --}}
-                <li class="{{ $active == 'search' ? 'active' : '' }}">
-                    <a href="{{ URL::route('search') }}">
+                <li class="">
+                    <a href="{{ URL::route('home') }}">
                         Inicio
                     </a>
                 </li>
                 {{-- Products --}}
-                <li class="{{ $active == 'search' ? 'active' : '' }}">
-                    <a href="{{ URL::route('search') }}">
+                <li class="">
+                    <a href="#services">
                         Servicios
                     </a>
                 </li>
                 {{-- Products --}}
-                <li class="{{ $active == 'search' ? 'active' : '' }}">
-                    <a href="{{ URL::route('search') }}">
+                <li class="">
+                    <a href="#coverage">
                         Cobertura
                     </a>
                 </li>
                 {{-- Lang --}}
                 <li>
-                    <a href="{{ url('lang', [\App::getLocale() == 'es' ? 'en' : 'es']) }}">
+                    <a href="#contact">
                         Contacto
                     </a>
                 </li>

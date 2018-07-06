@@ -55,7 +55,7 @@
 		</div>
 	</div>
 
-	<div class="row contact-us">
+	<div id="services" class="row contact-us">
 		<div class="col-xs-12">
 			<div class="row">
 				<div class="col-xs-12">
@@ -102,7 +102,7 @@
 		</div>
 	</div>
 
-	<div class="row bg-blue color-white module-address">
+	<div id="coverage" class="row bg-blue color-white module-address">
 		<div class="col-xs-12">
 			<p class="text-center font-size-16">Mantenimiento Preventivo y Correctivo para Equipos de Refrigeración y Lavado Doméstico y Comercial</p>
 			<p class="text-center font-size-16"><strong>Zonas de Cobertura: Valle Dorado, Satélite, Polanco, Naucalpan, Santa Mónica y Zona Norte del Estado de México</strong></p>
@@ -115,7 +115,7 @@
     	</div>
     </div>
 
-	<div class="container">
+	<div id="contact" class="container">
 		<div class="row contact">
 	    	<div class="col-xs-12">
 	    		<h2 class="text-center">Contacto</h2>
