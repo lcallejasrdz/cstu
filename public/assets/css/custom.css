@@ -240,3 +240,32 @@ body {
 .font-size-16 {
 	font-size: 16px;
 }
+
+.btn-send-container {
+	top: 15vw;
+}
+
+@media (max-width: 769px) {
+	.btn-send-container .btn {
+		font-size: 3vw;
+	}
+
+	.info-icons-top {
+		padding-top: 45px;
+	}
+}
+
+.btn-send-container .btn,
+.btn-send-container .btn:hover,
+.btn-send-container .btn:focus,
+.btn-send-container .btn:active {
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 15px;
+	color: #fff;
+}
+
+.info-icons img {
+	max-width: 100%;
+	width: 60px;
+}

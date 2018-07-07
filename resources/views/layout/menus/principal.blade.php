@@ -1,6 +1,5 @@
 <div class="row">
-    <div class="col-xs-4 col-sm-2 col-md-1"></div>
-    <div class="col-xs-8 col-sm-10 col-md-11">
+    <div class="col-xs-12">
         <p class="text-center title-head color-blue">Reparación de <strong>Refrigeradores</strong> y <strong>Equipos de Lavado</strong> <span class="color-orange">></span> <strong class="underline underline-orange">Contáctanos</strong>, Atención Inmediata: 5543315214 // 58714282 // 5561103023<br class="hidden-md hidden-lg"><a href="https://www.facebook.com/cstuniversal/" target="_blank" class="margin-left-30-md"><i class="fa fa-facebook-square fa-fw"></i></a><a href="tel:+5215543315214"><i class="fa fa-whatsapp fa-fw color-green"></i></a></p>
     </div>
 </div>
