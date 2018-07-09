@@ -18,7 +18,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6 hidden-md hidden-lg hidden-xl btn-send-container text-center">
-						<a href="tel:+5215543315214" class="btn btn-default font-size-16 color-white"><span class="color-green">></span> <span class="underline underline-green">Envía</span> un Mensaje <i class="fa fa-whatsapp fa-fw color-green"></i></a>
+						<a href="tel:+5215543315214" class="btn btn-default font-size-16 color-white"><span class="color-green">></span> <span class="underline underline-green">Envía</span> un Mensaje <img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a>
 					</div>
 					<div class="col-xs-6 col-md-5 text-center hidden-md hidden-lg hidden-xl">
 						<img src="{{ URL::to('assets/images/index/hombre1.png') }}" alt="..." class="">
@@ -71,7 +71,7 @@
 					<h2 class="text-center color-blue">Contáctanos Ahora</h2>
 					<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Atención</span> Inmediata:</p>
 					<p class="text-center font-size-19">43315214 // 58714282 // 5561103023</p>
-					<p class="text-center font-size-19"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span> <a href="tel:+5215543315214"><i class="fa fa-whatsapp fa-fw color-green"></i></a></p>
+					<p class="text-center font-size-19"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span> <a href="tel:+5215543315214"><img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a></p>
 				</div>
 			</div>
 			<div class="row container-fluid">

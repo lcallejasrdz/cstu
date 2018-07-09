@@ -263,9 +263,15 @@ body {
 	border: 2px solid #fff;
 	border-radius: 15px;
 	color: #fff;
+	padding-right: 30px;
 }
 
 .info-icons img {
 	max-width: 100%;
 	width: 60px;
+}
+
+.social-icons {
+	max-width: 100% !important;
+	width: 20px !important;
 }
