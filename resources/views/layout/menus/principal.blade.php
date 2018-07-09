@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12">
-        <p class="text-center title-head color-blue">Reparación de <strong>Refrigeradores</strong> y <strong>Equipos de Lavado</strong> <span class="color-orange">></span> <strong class="underline underline-orange">Contáctanos</strong>, Atención Inmediata: 5543315214 // 58714282 // 5561103023<br class="hidden-md hidden-lg"><a href="https://www.facebook.com/cstuniversal/" target="_blank" class="margin-left-30-md"><img src="{{ URL::to('assets/images/index/fb.png') }}" alt="..." class="social-icons"></a> <a href="tel:+5215543315214"><img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a></p>
+        <p class="text-center title-head color-blue">Reparación de <strong>Refrigeradores</strong> y <strong>Equipos de Lavado</strong> <span class="color-orange">></span> <strong class="underline underline-orange">Contáctanos</strong>, Atención Inmediata: 5543315214 // 58714282 // 5561103023<br class="hidden-md hidden-lg"><a href="https://www.facebook.com/cstuniversal/" target="_blank" class="margin-left-30-md"><img src="{{ URL::to('assets/images/index/fb.png') }}" alt="..." class="social-icons"></a> <a href="whatsapp://send?phone=+5215543315214"><img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a></p>
     </div>
 </div>
 <nav class="navbar navbar-default bg-blue">

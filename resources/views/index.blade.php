@@ -71,7 +71,7 @@
 					<h2 class="text-center color-blue">Contáctanos Ahora</h2>
 					<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Atención</span> Inmediata:</p>
 					<p class="text-center font-size-19">43315214 // 58714282 // 5561103023</p>
-					<p class="text-center font-size-19"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span> <a href="tel:+5215543315214"><img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a></p>
+					<p class="text-center font-size-19"><span class="color-green">></span> <span class="underline underline-green">Envía un Mensaje</span> <a href="whatsapp://send?phone=+5215543315214"><img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a></p>
 				</div>
 			</div>
 			<div class="row container-fluid">
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 text-center">
-					<img src="{{ URL::to('assets/images/index/reparacion1.png') }}" alt="...">
+					<img src="{{ URL::to('assets/images/index/reparacion2.png') }}" alt="...">
 					<p class="text-center font-size-19"><span class="color-orange">></span> <span class="underline underline-orange">Reparación</span> de Equipos de Lavado</p>
 					<div class="row">
 						<div class="col-xs-6 text-left">
