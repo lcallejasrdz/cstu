@@ -15,36 +15,36 @@ Route::group(array('middleware' => 'langMiddleware'), function () {
     /*
      * Lang
      */
-    Route::get('lang/{lang}', function ($lang) {
-        session(['lang' => $lang]);
-        return \Redirect::back();
-    })->where([
-        'lang' => 'en|es'
-    ]);
+    // Route::get('lang/{lang}', function ($lang) {
+    //     session(['lang' => $lang]);
+    //     return \Redirect::back();
+    // })->where([
+    //     'lang' => 'en|es'
+    // ]);
 
     /*
      * Web Site
      */
     Route::get('/', array('as' => 'home', 'uses' => 'FrontEndController@index'));
-    Route::get('contact', array('as' => 'contact', 'uses' => 'FrontEndController@getContact'));
+    // Route::get('contact', array('as' => 'contact', 'uses' => 'FrontEndController@getContact'));
     Route::post('contact', array('as' => 'contact', 'uses' => 'FrontEndController@postContact'));
 
     /*
      * Purchases
      */
-    Route::get('search', array('as' => 'search', 'uses' => 'FrontEndController@search'));
-    Route::get('search/{slug}', array('as' => 'detail', 'uses' => 'FrontEndController@detail'));
-    Route::post('add-product-to-cart', array('as' => 'add-product-to-cart', 'uses' => 'CartController@setProduct'));
-    Route::get('delete-product-of-cart/{id}', array('as' => 'delete-product-of-cart', 'uses' => 'CartController@deleteProduct'));
-    Route::get('cart', array('as' => 'cart', 'uses' => 'FrontEndController@cart'));
-    Route::group(array('middleware' => 'sentinelCustomer'), function () {
-        Route::get('confirm-purchase', array('as' => 'confirm-purchase', 'uses' => 'FrontEndController@confirmPurchase'));
-        Route::post('payment-paypal', array('as' => 'payment-paypal', 'uses' => 'PaypalController@postPaymentWithpaypal'));
-        Route::get('payment-paypal-status', array('as' => 'payment-paypal-status', 'uses' => 'PaypalController@getPaymentStatus'));
-        Route::get('my-purchases', array('as' => 'my-purchases', 'uses' => 'SalesController@index'));
-        Route::get('my-purchases/{id}', array('as' => 'my-purchases.show', 'uses' => 'SalesController@show'));
-        Route::get('my-purchases/{id}/cancel', array('as' => 'my-purchases.cancel', 'uses' => 'SalesController@cancelItem'));
-    });
+    // Route::get('search', array('as' => 'search', 'uses' => 'FrontEndController@search'));
+    // Route::get('search/{slug}', array('as' => 'detail', 'uses' => 'FrontEndController@detail'));
+    // Route::post('add-product-to-cart', array('as' => 'add-product-to-cart', 'uses' => 'CartController@setProduct'));
+    // Route::get('delete-product-of-cart/{id}', array('as' => 'delete-product-of-cart', 'uses' => 'CartController@deleteProduct'));
+    // Route::get('cart', array('as' => 'cart', 'uses' => 'FrontEndController@cart'));
+    // Route::group(array('middleware' => 'sentinelCustomer'), function () {
+    //     Route::get('confirm-purchase', array('as' => 'confirm-purchase', 'uses' => 'FrontEndController@confirmPurchase'));
+    //     Route::post('payment-paypal', array('as' => 'payment-paypal', 'uses' => 'PaypalController@postPaymentWithpaypal'));
+    //     Route::get('payment-paypal-status', array('as' => 'payment-paypal-status', 'uses' => 'PaypalController@getPaymentStatus'));
+    //     Route::get('my-purchases', array('as' => 'my-purchases', 'uses' => 'SalesController@index'));
+    //     Route::get('my-purchases/{id}', array('as' => 'my-purchases.show', 'uses' => 'SalesController@show'));
+    //     Route::get('my-purchases/{id}/cancel', array('as' => 'my-purchases.cancel', 'uses' => 'SalesController@cancelItem'));
+    // });
 
     /*
      * Auth
@@ -55,8 +55,8 @@ Route::group(array('middleware' => 'langMiddleware'), function () {
     	Route::post('login', array('as' => 'login', 'uses' => 'AuthController@postLogin'));
 
         // Suppliers
-        Route::get('register-supplier', array('as' => 'suppliers.create', 'uses' => 'SuppliersController@create'));
-        Route::post('register-supplier', array('as' => 'suppliers.store', 'uses' => 'SuppliersController@store'));
+        // Route::get('register-supplier', array('as' => 'suppliers.create', 'uses' => 'SuppliersController@create'));
+        // Route::post('register-supplier', array('as' => 'suppliers.store', 'uses' => 'SuppliersController@store'));
     
         // Recover password
         Route::get('forgot-password',array('as' => 'forgot-password','uses' => 'AuthController@getForgotPassword'));
@@ -67,22 +67,22 @@ Route::group(array('middleware' => 'langMiddleware'), function () {
         /*
          * Customers
          */
-        $route = 'customers';
-        $controller = 'CustomersController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('create', array('as' => 'front.'.$route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => 'front.'.$route.'.store', 'uses' => $controller.'@store'));
-        });
+        // $route = 'customers';
+        // $controller = 'CustomersController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('create', array('as' => 'front.'.$route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => 'front.'.$route.'.store', 'uses' => $controller.'@store'));
+        // });
 
         /*
          * Suppliers
          */
-        $route = 'suppliers';
-        $controller = 'SuppliersController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('create', array('as' => 'front.'.$route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => 'front.'.$route.'.store', 'uses' => $controller.'@store'));
-        });
+        // $route = 'suppliers';
+        // $controller = 'SuppliersController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('create', array('as' => 'front.'.$route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => 'front.'.$route.'.store', 'uses' => $controller.'@store'));
+        // });
     });
     Route::group(array('middleware' => 'sentinelAuth'), function () {
         // Datatables
@@ -92,22 +92,22 @@ Route::group(array('middleware' => 'langMiddleware'), function () {
 
         Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
 
-        Route::group(array('middleware' => 'sentinelCustomer'), function () {
-            /*
-             * Customers
-             */
-            $route = 'my-account';
-            $controller = 'CustomersController';
-            Route::group(array('prefix' => $route), function () use ($route, $controller) {
-                Route::get('{slug}', array('as' => $route, 'uses' => $controller.'@show'));
-            });
-            $route = 'edit-my-account';
-            $controller = 'CustomersController';
-            Route::group(array('prefix' => $route), function () use ($route, $controller) {
-                Route::get('{slug}', array('as' => $route, 'uses' => $controller.'@edit'));
-                Route::put('{id}', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            });
-        });
+        // Route::group(array('middleware' => 'sentinelCustomer'), function () {
+        //     /*
+        //      * Customers
+        //      */
+        //     $route = 'my-account';
+        //     $controller = 'CustomersController';
+        //     Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //         Route::get('{slug}', array('as' => $route, 'uses' => $controller.'@show'));
+        //     });
+        //     $route = 'edit-my-account';
+        //     $controller = 'CustomersController';
+        //     Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //         Route::get('{slug}', array('as' => $route, 'uses' => $controller.'@edit'));
+        //         Route::put('{id}', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     });
+        // });
     });
 
     /*
@@ -119,176 +119,176 @@ Route::group(array('middleware' => 'langMiddleware'), function () {
     	Route::get('/', array('as' => 'dashboard', 'uses' => 'DashboardController@index'));
 
         // Countries
-        $route = 'countries';
-        $controller = 'CountriesController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'countries';
+        // $controller = 'CountriesController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // States
-        $route = 'states';
-        $controller = 'StatesController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'states';
+        // $controller = 'StatesController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Cities
-        $route = 'cities';
-        $controller = 'CitiesController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'cities';
+        // $controller = 'CitiesController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Categories
-        $route = 'categories';
-        $controller = 'CategoriesController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'categories';
+        // $controller = 'CategoriesController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Subcategories
-        $route = 'subcategories';
-        $controller = 'SubcategoriesController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'subcategories';
+        // $controller = 'SubcategoriesController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Memberships
-        $route = 'memberships';
-        $controller = 'MembershipsController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'memberships';
+        // $controller = 'MembershipsController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
     	// Users
         $route = 'users';
         $controller = 'UsersController';
         Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+            // Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+            // Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+            // Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+            // Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+            // Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+            // Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
             Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
             Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
             Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
         });
 
         // Suppliers
-        $route = 'suppliers';
-        $controller = 'SuppliersController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'suppliers';
+        // $controller = 'SuppliersController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Customers
-        $route = 'customers';
-        $controller = 'CustomersController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'customers';
+        // $controller = 'CustomersController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Products
-        $route = 'products';
-        $controller = 'ProductsController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'products';
+        // $controller = 'ProductsController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Services
-        $route = 'services';
-        $controller = 'ServicesController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
-            Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
-            Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
-            Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-        });
+        // $route = 'services';
+        // $controller = 'ServicesController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('deleted', array('as' => $route.'.deleted', 'uses' => $controller.'@getRestore'));
+        //     Route::patch('restore', array('as' => $route.'.restore', 'uses' => $controller.'@postRestore'));
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::delete('delete', array('as' => $route.'.delete', 'uses' => $controller.'@destroy'));
+        //     Route::get('create', array('as' => $route.'.create', 'uses' => $controller.'@create'));
+        //     Route::post('create', array('as' => $route.'.store', 'uses' => $controller.'@store'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        // });
 
         // Sales
-        $route = 'sales';
-        $controller = 'SalesController';
-        Route::group(array('prefix' => $route), function () use ($route, $controller) {
-            Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
-            Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
-            Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
-            Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
-            Route::get('{id}/status', array('as' => $route.'.update-status', 'uses' => $controller.'@updateStatus'));
-        });
+        // $route = 'sales';
+        // $controller = 'SalesController';
+        // Route::group(array('prefix' => $route), function () use ($route, $controller) {
+        //     Route::get('/', array('as' => $route, 'uses' => $controller.'@index'));
+        //     Route::get('{id}/edit', array('as' => $route.'.edit', 'uses' => $controller.'@edit'));
+        //     Route::put('{id}/edit', array('as' => $route.'.update', 'uses' => $controller.'@update'));
+        //     Route::get('{id}', array('as' => $route.'.show', 'uses' => $controller.'@show'));
+        //     Route::get('{id}/status', array('as' => $route.'.update-status', 'uses' => $controller.'@updateStatus'));
+        // });
 
         // Contacts
         $route = 'contacts';
