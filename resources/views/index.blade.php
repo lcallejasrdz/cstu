@@ -18,7 +18,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6 hidden-md hidden-lg hidden-xl btn-send-container text-center">
-						<a href="intent://send/+5215543315214#Intent;scheme=smsto;package=com.whatsapp" class="btn btn-default font-size-16 color-white"><span class="color-green">></span> <span class="underline underline-green">Envía</span> un Mensaje <img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a>
+						<a href="whatsapp:contact=+5215543315214@s.whatsapp.com" class="btn btn-default font-size-16 color-white"><span class="color-green">></span> <span class="underline underline-green">Envía</span> un Mensaje <img src="{{ URL::to('assets/images/index/wa.png') }}" alt="..." class="social-icons"></a>
 					</div>
 					<div class="col-xs-6 col-md-5 text-center hidden-md hidden-lg hidden-xl">
 						<img src="{{ URL::to('assets/images/index/hombre1.png') }}" alt="..." class="">
