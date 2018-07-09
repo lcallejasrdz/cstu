@@ -182,7 +182,7 @@
 		// Initialize and add the map
 		function initMap() {
   			// The location of Uluru
-  			var uluru = {lat: 19.5261857, lng: -99.2695107};
+  			var uluru = {lat: 19.5346489, lng: -99.2249047};
   			// The map, centered at Uluru
   			var map = new google.maps.Map(
       			document.getElementById('map'), {zoom: 18, center: uluru});
@@ -190,9 +190,11 @@
   			var contentString = '<div id="content">'+
       			'<div id="siteNotice">'+
 		      	'</div>'+
-		      	'<h1 id="firstHeading" class="firstHeading">Escuela de Fútbol Pumas Madín</h1>'+
+		      	'<h1 id="firstHeading" class="firstHeading">Centro de Servicio Técnico Universal</h1>'+
 		      	'<div id="bodyContent">'+
-		      	'<p>Calle 2 s/n, Col. Nuevo Madín, Atizapán de Zaragoza, C.P. 52989</p>'+
+		      	'<p>Calle Convento de Sta. Brígida 2</p>'+
+				'<p>Hab Valle de Los Pinos 1a. Secc</p>'+
+				'<p>Tlalnepantla, Méx.</p>'+
 		      	'</div>'+
 		      	'</div>';
 
