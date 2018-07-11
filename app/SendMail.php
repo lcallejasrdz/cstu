@@ -17,9 +17,9 @@ class SendMail extends Model
     {
         $mail = new PHPMailer(true);
         
-        if(env('APP_ENV') == 'local'){
+        // if(env('APP_ENV') == 'local'){
             $mail->isSMTP();
-        }
+        // }
         $mail->SMTPAuth = true;
 
         $mail->SMTPSecure = env('MAIL_ENCRYPTION');
