@@ -188,7 +188,7 @@ class SendMail extends Model
             $mail->Subject = $subject;
             $mail->MsgHTML($msg);
             $mail->addAddress(env('MAIL_ADMIN_ADDRESS'), env('MAIL_ADMIN_NAME'));
-            // $mail->addBCC('email', 'name');
+            $mail->addBCC('blancblancwhite@gmail.com', 'Contacto CSTU');
             $mail->send();
         } catch (phpmailerException $e) {
             dd($e);
