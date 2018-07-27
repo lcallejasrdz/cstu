@@ -43,6 +43,11 @@
         </script>
 
         @yield('styles')
+
+        {{-- Metrics Codes --}}
+        @if(env('APP_ENV') == 'production')
+            @include('metric_codes.google_analytics')
+        @endif
     </head>
     <body>
         <div class="container-full">
