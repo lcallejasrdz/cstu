@@ -47,6 +47,7 @@
         {{-- Metrics Codes --}}
         @if(env('APP_ENV') == 'production')
             @include('metric_codes.google_analytics')
+            @include('metric_codes.google_conversion')
         @endif
     </head>
     <body>
